@@ -2,16 +2,15 @@
   <div class="container-about">
       <div class="row mb-3">
           <div class="col-sm-7">
-              <h1 class="text-left">JENNIFER OENNING</h1>
-              <h3 class="text-left about-me">web developer & content creator</h3>
+              <h1 class="text-left">{{ name }}</h1>
+              <h3 class="text-left about-me">{{ worker }}</h3>
           </div>
           <div class="col-sm-4">
               <img class="w-100" src="../assets/logo.png" alt="Draw Jennifer">
           </div>
       </div>
       <div class="row">
-          <p class="intro-about">Olá me chamo Jennifer, tenho 20 anos, moro em Santa Catarina, estou cursando Engenharia de Software e trabalho atualmente como Web Developer - 
-              Full Stack. Tenho um canal no Youtube e faço lives pela Twitch! :D</p>
+          <p class="intro-about">{{ message }}</p>
       </div>
   </div>
 </template>
@@ -19,7 +18,14 @@
 <script>
 
 export default {
-  name: 'About'
+  name: 'About',
+  data () {
+      return {
+        name: "JENNIFER OENNING",
+        worker: "web developer & content creator",
+        message: "Olá seja bem vindo ao meu cantinho! Me chamo Jennifer Oenning, tenho 20 anos e eu sou extremamente apaixonada por tecnologia e games, atualmente estou no setor de desenvolvimento web como full stack na empresa Bw2 Tecnologia, também sou criadora de conteúdo na plataforma da Twitch e Youtube, construi este site pra vocês conhecerem um pouquinho de mim e conhecer meus projetos, eles são totalmente códigos abertos para quaisquer opiniões ou mudanças, quero criar aqui algumas matérias de tecnologias, tutoriais, espero que vocês gostem e se quiser me seguir nas redes sociais vou deixar logo a baixo :D",
+    }
+  }
 }
 </script>
 
